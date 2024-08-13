@@ -8,7 +8,7 @@ pipeline {
       steps {
         bat '''
           npm install --save-dev jest-junit
-          npm run test
+          npm test
         '''
       }
     }
