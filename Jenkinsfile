@@ -17,7 +17,7 @@ pipeline {
     always {
       junit (
         allowEmptyResults: true
-        testResults:'.\coverage\lcov-report'
+        testResults:'.\coverage\clover.xml'
       )
     }
   }
