@@ -8,7 +8,7 @@ pipeline {
       steps {
         bat '''
           npm install
-          npm run coverage
+          npm run test
         '''
       }
     }
@@ -17,7 +17,7 @@ pipeline {
     always {
       junit (
         allowEmptyResults: true
-        testResults:'.\coverage\clover.xml'
+        testResults:'reports/junit/js-test-results.xml'
       )
     }
   }
