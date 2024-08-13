@@ -26,10 +26,19 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cls && react-scripts test",
+    "test": "cls && react-scripts test --env=jsdom --reporters=jest-junit",
     "eject": "react-scripts eject",
     "coverage": "react-scripts test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}'",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\" "
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      ["jest-junit", {
+        "outputDirectory": "./reports/junit",
+        "outputName": "js-test-results.xml"
+      }]
+    ]
   },
   "eslintConfig": {
     "extends": [
