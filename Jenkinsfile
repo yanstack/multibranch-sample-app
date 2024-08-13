@@ -7,7 +7,6 @@ pipeline {
     stage('Build') {
       steps {
         bat '''
-          npm install
           npm install --save-dev jest-junit
           npm run test
         '''
