@@ -12,5 +12,5 @@ test('renders learn react link', () => {
     </div>,
   )
   const element = screen.getByRole('button', { hidden: true })
-  console.log(element)
+  expect(element).ToBeInTheDocument();
 })
